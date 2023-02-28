@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Flashcards from "./Flashcards";
+import "./styles/reset.css"
+import "./styles/style.css"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <div className="zap-body">
+        <div className="top">
+          <img src="./assets/logo.png" alt="zaprecall-logo" className="zap-logo"/>
+          <h1>ZapRecall</h1>
+        </div>       
+
+        <Flashcards />
+
+        <div className="zap-footer">
+          <h2>0/4 CONCLUÍDOS</h2>
+        </div>
+      </div>    
+    </>
+  )
 }
 
 export default App;
