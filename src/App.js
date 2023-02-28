@@ -13,7 +13,7 @@ function App() {
 
         <Flashcards />
 
-        <div className="zap-footer">
+        <div className="zap-footer" data-test="footer">
           <h2>0/4 CONCLUÍDOS</h2>
         </div>
       </div>    
