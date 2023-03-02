@@ -1,8 +1,14 @@
+import { useState } from "react";
 import Flashcards from "./Flashcards";
+import Footer from "./Footer";
 import "./styles/reset.css"
 import "./styles/style.css"
 
+
 function App() {
+  const [answer, setAnswer] = useState("")
+  const [finished, setFinished] = useState("")
+
   return (
     <>
       <div className="zap-body">
@@ -13,9 +19,7 @@ function App() {
 
         <Flashcards />
 
-        <div className="zap-footer" data-test="footer">
-          <h2>0/4 CONCLUÍDOS</h2>
-        </div>
+        <Footer />
       </div>    
     </>
   )
