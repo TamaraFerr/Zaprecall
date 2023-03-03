@@ -6,8 +6,6 @@ import "./styles/style.css"
 
 
 function App() {
-  const [answer, setAnswer] = useState("")
-  const [finished, setFinished] = useState("")
 
   return (
     <>

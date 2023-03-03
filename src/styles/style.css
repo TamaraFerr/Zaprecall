@@ -105,6 +105,19 @@ button {
     position: relative;
 }
 
+.botao1 {
+    background-color: #FF3030;
+    color: #FFFFFF;
+}
+.botao2 {
+    background-color: #FF922E;
+    color: #FFFFFF;
+}
+.botao3 {
+    background-color: #2FBE34;
+    color: #FFFFFF;
+}
+
 p {
     margin-left: 15px;
     word-break: break-word;
