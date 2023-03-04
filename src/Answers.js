@@ -1,4 +1,9 @@
+
+
 export default function Answers(props) {
+
+
+
     return (
         <div className="zap-question-answer" data-test="flashcard">
             <p data-test="flashcard-text">{props.answer}</p>
