@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Flashcards from "./Flashcards";
 import Footer from "./Footer";
 import "./styles/reset.css"
