@@ -7,7 +7,12 @@ export default function Flashcards() {
     return (
         <ul className="questions-container">
             {cards.map((card, index) =>
-                <Flashcard key={index} card={card} index={index}/>
+                <Flashcard 
+                key={index} 
+                index={index}
+                question={card.question}
+                answer={card.answer}
+                />
             )}
         </ul>
     )
