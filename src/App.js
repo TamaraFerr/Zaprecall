@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Flashcards from "./Flashcards";
-import Footer from "./Footer";
-import "./styles/reset.css"
+import Flashcards from "./components/Flashcards";
+import Footer from "./components/Footer";
 import "./styles/style.css"
+import styled from "styled-components";
 
 
 function App() {
@@ -10,18 +10,47 @@ function App() {
 
   return (
     <>
-      <div className="zap-body">
-        <div className="top">
-          <img src="./assets/logo.png" alt="zaprecall-logo" className="zap-logo"/>
-          <h1>ZapRecall</h1>
-        </div>       
+      <Container>
+        <Top>
+          <Logo src="./assets/logo.png" alt="zaprecall-logo"/>
+          <Title>ZapRecall</Title>
+        </Top>       
 
         <Flashcards count={{contador: contador, setContador: setContador}}/>
 
         <Footer contador={contador}/>
-      </div>    
+      </Container>    
     </>
   )
 }
 
 export default App;
+
+
+const Container = styled.div `
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+
+const Top = styled.div `
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 48px;
+`
+
+const Logo = styled.img `
+  width: 52px;
+  height: 60px;
+  margin-right: 25px;
+`
+
+const Title = styled.h1 `
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: bold;
+  font-family: 'Rigtheous';
+  margin-right: 20px;
+`

@@ -1,7 +1,6 @@
 import { useState } from "react"
 import Questions from "./Questions"
 
-
 export default function Flashcard(props) {
     const [clicked, setClicked] = useState(false)
 

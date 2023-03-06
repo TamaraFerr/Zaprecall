@@ -1,11 +1,12 @@
 import cards from "./cards"
 import Flashcard from "./Flashcard"
+import styled from "styled-components"
 
 export default function Flashcards(props) {
 
 
     return (
-        <ul className="questions-container">
+        <ContainerQuestions>
             {cards.map((card, index) =>
                 <Flashcard 
                 key={index} 
@@ -15,7 +16,15 @@ export default function Flashcards(props) {
                 count={props.count}
                 />
             )}
-        </ul>
+        </ContainerQuestions>
     )
 }
 
+const ContainerQuestions = styled.ul `
+    display: flex;
+    flex-direction: column;
+    margin-top: 27px;
+    margin-bottom: 90px;
+    box-sizing: border-box;
+    width: 300px;
+`
