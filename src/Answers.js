@@ -1,17 +1,21 @@
 
 
 export default function Answers(props) {  
-    const wrong = ["erro", "./assets/icone_erro.png", "no-icon"]
-    const almost = ["quase", "./assets/icone_quase.png", "partial-icon"]
-    const zap = ["certo", "./assets/icone_certo.png", "zap-icon"]
+    const wrong = ["erro", "./assets/icone_erro.png", "no-icon", true]
+    const almost = ["quase", "./assets/icone_quase.png", "partial-icon", true]
+    const zap = ["certo", "./assets/icone_certo.png", "zap-icon", true]
+    const { contador, setContador } = props.count
 
-    function handleClick(classe, icon, teste) {
+    function handleClick(classe, icon, teste, desabilitado) {
         props.clicked(false)
         props.setConfig({
             classe: classe, 
             icon: icon,
-            teste: teste
+            teste: teste,
+            desabilitado: desabilitado
         })
+
+        setContador(contador + 1)
 
         console.log(classe)
     }

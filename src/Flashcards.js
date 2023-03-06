@@ -1,7 +1,7 @@
 import cards from "./cards"
 import Flashcard from "./Flashcard"
 
-export default function Flashcards() {
+export default function Flashcards(props) {
 
 
     return (
@@ -12,6 +12,7 @@ export default function Flashcards() {
                 index={index}
                 question={card.question}
                 answer={card.answer}
+                count={props.count}
                 />
             )}
         </ul>

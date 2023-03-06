@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Flashcards from "./Flashcards";
 import Footer from "./Footer";
 import "./styles/reset.css"
@@ -5,6 +6,7 @@ import "./styles/style.css"
 
 
 function App() {
+  const [contador, setContador] = useState(0)
 
   return (
     <>
@@ -14,9 +16,9 @@ function App() {
           <h1>ZapRecall</h1>
         </div>       
 
-        <Flashcards />
+        <Flashcards count={{contador: contador, setContador: setContador}}/>
 
-        <Footer />
+        <Footer contador={contador}/>
       </div>    
     </>
   )

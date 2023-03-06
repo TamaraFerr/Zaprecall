@@ -11,7 +11,7 @@ export default function Questions(props) {
 
     return (
         <> 
-            {clicked ? <Answers answer={props.answer} clicked={props.clicked} setConfig={props.setConfig}/> : 
+            {clicked ? <Answers answer={props.answer} clicked={props.clicked} setConfig={props.setConfig} count={props.count}/> : 
             <div className="zap-question-front" data-test="flashcard">
                 <p data-test="flashcard-text">{props.question}</p>
                 <img src="./assets/seta_virar.png" className="zap-vira" alt="zap-vira" data-test="turn-btn" onClick={handleClick}/>
