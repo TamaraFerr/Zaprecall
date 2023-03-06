@@ -1,8 +1,14 @@
 import { useState } from "react"
 import Questions from "./Questions"
 
+
 export default function Flashcard(props) {
     const [clicked, setClicked] = useState(false)
+
+    const [config, setConfig] = useState({
+        classe:"", 
+        icon: "./assets/seta_play.png" , 
+        teste: "play-btn"})
 
     function handleClick() {
         setClicked(true)
@@ -10,10 +16,10 @@ export default function Flashcard(props) {
 
     return (
         <li>
-            {clicked ?  <Questions question={props.question} answer={props.answer}/>  :
-                <div className="zap-questions" data-test="flashcard">
+            {clicked ?  <Questions question={props.question} answer={props.answer} clicked={setClicked} index={props.index} setConfig={setConfig}/>  :
+                <div className={`zap-questions ${config.classe}`} data-test="flashcard">
                     <p data-test="flashcard-text">{`Pergunta ${props.index + 1}`}</p>
-                    <img src="./assets/seta_play.png" className="zap-start" alt="zap-start" data-test="play-btn" onClick={handleClick}/>
+                    <img src={config.icon} className="zap-start" alt="zap-start" data-test={config.teste} onClick={handleClick}/>
                 </div>}
         </li>
     )

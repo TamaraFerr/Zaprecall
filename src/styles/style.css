@@ -146,3 +146,18 @@ h2 {
     font-size: 18px;
     font-weight: 400;
 }
+
+.erro {
+    color: #FF3030;
+    text-decoration: line-through;
+}
+
+.certo {
+    color: #2FBE34;
+    text-decoration: line-through;
+}
+
+.quase {
+    color: #FF922E;
+    text-decoration: line-through;
+}
